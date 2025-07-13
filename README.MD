@@ -387,7 +387,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Project Team
 - **David Ndeleva** - *Lead Developer* - Chuka University
-- **Mr. Mutua** - *Project Supervisor*
+- **Joseph Mutua** - *Project Supervisor*
 
 ### Special Thanks
 - Kenya National Examination Council
@@ -399,11 +399,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Technical Support
 - **Email**: davidndeleva38@gmail.com
 - **Documentation**: [WhatsApp](https://wa.me/254746193590)
-- **Issues**: [GitHub Issues](https://ndeleva.vercel)
+- **Issues**: [GitHub Issues](https://ndeleva.vercel.app)
 
 ### Academic Inquiries
 - **Institution**: Chuka University
-- **Supervisor**: Mr. Mutua
+- **Supervisor**: Joseph Mutua
 - **Student**: David Ndeleva
 
 ---
