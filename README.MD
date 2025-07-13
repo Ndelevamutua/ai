@@ -48,8 +48,8 @@ This project implements an AI-driven cybersecurity system that showcases how art
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/yourusername/ai-cybersecurity-solutions.git
-   cd ai-cybersecurity-solutions
+   git clone https://github.com/Ndelevamutua/ai.git
+   cd ai
    \`\`\`
 
 2. **Open the application**
@@ -451,8 +451,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Authors & Acknowledgments
 
 ### Project Team
-- **Mutuku Mumbua** - *Lead Developer* - Kibwezi West Technical and Vocational College
-- **Mr. Job Kyalo** - *Project Supervisor*
+- **David Ndeleva** - *Lead Developer* - Chuka University
+- **Mr. Mutua** - *Project Supervisor*
 
 ### Special Thanks
 - Kenya National Examination Council
@@ -462,14 +462,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support & Contact
 
 ### Technical Support
-- **Email**: support@aicyberguard.com
-- **Documentation**: [Wiki Pages](https://github.com/yourusername/ai-cybersecurity-solutions/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ai-cybersecurity-solutions/issues)
+- **Email**: davidndeleva38@gmail.com
+- **Documentation**: [WhatsApp](https://wa.me/254746193590)
+- **Issues**: [GitHub Issues](https://ndeleva.vercel)
 
 ### Academic Inquiries
-- **Institution**: Kibwezi West Technical and Vocational College
-- **Supervisor**: Mr. Job Kyalo
-- **Student**: Mutuku Mumbua (Index: 3480030006)
+- **Institution**: Chuka University
+- **Supervisor**: Mr. Mutua
+- **Student**: David Ndeleva
 
 ---
 
