@@ -1,6 +1,6 @@
 # AI-Driven Cybersecurity Solutions
 
-A comprehensive web-based cybersecurity dashboard that demonstrates the implementation of artificial intelligence in threat detection, network monitoring, and automated incident response.
+A comprehensive web-based cybersecurity dashboard that demonstrates the implementation of artificial intelligence in threat detection, network monitoring, and automated incident response created By Ndeleva.
 
 ## 🛡️ Overview
 
@@ -72,36 +72,6 @@ This project implements an AI-driven cybersecurity system that showcases how art
    php -S localhost:8000
    \`\`\`
 
-## 🏗️ System Architecture
-
-┌─────────────────────────────────────────────────────────────┐
-│                    AI CyberGuard System                     │
-├─────────────────────────────────────────────────────────────┤
-│  Frontend Layer (HTML/CSS/JavaScript)                       │
-│  ├── Dashboard Interface                                    │
-│  ├── Real-time Updates                                      │
-│  └── User Interactions                                      │
-├─────────────────────────────────────────────────────────────┤
-│  AI Processing Layer                                        │
-│  ├── Threat Detection Engine                                │
-│  ├── Anomaly Detection Algorithms                           │
-│  ├── Behavioral Analysis Models                             │
-│  └── Pattern Recognition Systems                            │
-├─────────────────────────────────────────────────────────────┤
-│  Data Management Layer                                      │
-│  ├── Threat Intelligence Database                           │
-│  ├── Network Traffic Logs                                   │
-│  ├── User Behavior Profiles                                 │
-│  └── Incident Response Records                              │
-├─────────────────────────────────────────────────────────────┤
-│  Response & Mitigation Layer                                │
-│  ├── Automated Blocking Systems                             │
-│  ├── Quarantine Mechanisms                                  │
-│  ├── Alert Generation                                       │
-│  └── Incident Logging                                       │
-└─────────────────────────────────────────────────────────────┘
-
-
 ## 🔧 How It Works
 
 ### 1. Data Collection & Monitoring
@@ -114,33 +84,6 @@ The system continuously monitors various data sources:
 ### 2. AI-Powered Analysis
 Multiple AI algorithms work together to identify threats:
 
-#### Machine Learning Models
-\`\`\`
-javascript
-// Threat Detection Algorithm (Simplified)
-class ThreatDetectionAI {
-  static analyzeNetworkTraffic(data) {
-    // Pattern recognition for known attack signatures
-    const suspiciousPatterns = [
-      "unusual_port_scanning",
-      "ddos_pattern", 
-      "malware_signature",
-      "phishing_attempt"
-    ];
-    
-    // AI confidence scoring
-    const confidence = this.calculateConfidence(data);
-    
-    return {
-      threat: confidence > 0.7,
-      type: this.classifyThreat(data),
-      confidence: confidence,
-      severity: this.assessSeverity(data)
-    };
-  }
-}
-\`\`\`
-
 #### Anomaly Detection
 - **Unsupervised Learning**: Identifies patterns without pre-labeled data
 - **Statistical Analysis**: Detects deviations from normal behavior baselines
@@ -152,14 +95,6 @@ class ThreatDetectionAI {
 - **Risk Scoring**: Assigns risk levels based on behavioral anomalies
 
 ### 3. Real-time Processing Pipeline
-
-\`\`\`
--Data Input → Preprocessing → AI Analysis → Threat Classification → Response Decision → Action Execution
--     ↓              ↓             ↓              ↓                    ↓                ↓
--Network Traffic → Normalization → ML Models → Risk Assessment → Auto-Response → Block/Alert
--User Behavior  → Feature Extract → Anomaly Det → Confidence Score → Human Review → Log/Report
--File Uploads   → Signature Scan → Classification → Malware Check → Quarantine → Notify Admin
-\`\`\`
 
 ### 4. Automated Response System
 When threats are detected, the system automatically:
