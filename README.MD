@@ -48,8 +48,8 @@ This project implements an AI-driven cybersecurity system that showcases how art
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/Ndelevamutua/ai.git
-   cd ai
+- git clone https://github.com/Ndelevamutua/ai.git
+- cd ai
    \`\`\`
 
 2. **Open the application**
@@ -75,32 +75,32 @@ This project implements an AI-driven cybersecurity system that showcases how art
 ## 🏗️ System Architecture
 
 \`\`\`
-┌─────────────────────────────────────────────────────────────┐
-│                    AI CyberGuard System                     │
-├─────────────────────────────────────────────────────────────┤
-│  Frontend Layer (HTML/CSS/JavaScript)                       │
-│  ├── Dashboard Interface                                    │
-│  ├── Real-time Updates                                      │
-│  └── User Interactions                                      │
-├─────────────────────────────────────────────────────────────┤
-│  AI Processing Layer                                        │
-│  ├── Threat Detection Engine                                │
-│  ├── Anomaly Detection Algorithms                           │
-│  ├── Behavioral Analysis Models                             │
-│  └── Pattern Recognition Systems                            │
-├─────────────────────────────────────────────────────────────┤
-│  Data Management Layer                                      │
-│  ├── Threat Intelligence Database                           │
-│  ├── Network Traffic Logs                                   │
-│  ├── User Behavior Profiles                                 │
-│  └── Incident Response Records                              │
-├─────────────────────────────────────────────────────────────┤
-│  Response & Mitigation Layer                                │
-│  ├── Automated Blocking Systems                             │
-│  ├── Quarantine Mechanisms                                  │
-│  ├── Alert Generation                                       │
-│  └── Incident Logging                                       │
-└─────────────────────────────────────────────────────────────┘
+-┌─────────────────────────────────────────────────────────────┐
+-│                    AI CyberGuard System                     │
+-├─────────────────────────────────────────────────────────────┤
+-│  Frontend Layer (HTML/CSS/JavaScript)                       │
+-│  ├── Dashboard Interface                                    │
+-│  ├── Real-time Updates                                      │
+-│  └── User Interactions                                      │
+-├─────────────────────────────────────────────────────────────┤
+-│  AI Processing Layer                                        │
+-│  ├── Threat Detection Engine                                │
+-│  ├── Anomaly Detection Algorithms                           │
+-│  ├── Behavioral Analysis Models                             │
+-│  └── Pattern Recognition Systems                            │
+-├─────────────────────────────────────────────────────────────┤
+-│  Data Management Layer                                      │
+-│  ├── Threat Intelligence Database                           │
+-│  ├── Network Traffic Logs                                   │
+-│  ├── User Behavior Profiles                                 │
+-│  └── Incident Response Records                              │
+-├─────────────────────────────────────────────────────────────┤
+-│  Response & Mitigation Layer                                │
+-│  ├── Automated Blocking Systems                             │
+-│  ├── Quarantine Mechanisms                                  │
+-│  ├── Alert Generation                                       │
+-│  └── Incident Logging                                       │
+-└─────────────────────────────────────────────────────────────┘
 
 
 ## 🔧 How It Works
@@ -154,11 +154,11 @@ class ThreatDetectionAI {
 ### 3. Real-time Processing Pipeline
 
 \`\`\`
-Data Input → Preprocessing → AI Analysis → Threat Classification → Response Decision → Action Execution
-     ↓              ↓             ↓              ↓                    ↓               ↓
-Network Traffic → Normalization → ML Models → Risk Assessment → Auto-Response → Block/Alert
-User Behavior  → Feature Extract → Anomaly Det → Confidence Score → Human Review → Log/Report
-File Uploads   → Signature Scan → Classification → Malware Check → Quarantine → Notify Admin
+-Data Input → Preprocessing → AI Analysis → Threat Classification → Response Decision → Action Execution
+-     ↓              ↓             ↓              ↓                    ↓                ↓
+-Network Traffic → Normalization → ML Models → Risk Assessment → Auto-Response → Block/Alert
+-User Behavior  → Feature Extract → Anomaly Det → Confidence Score → Human Review → Log/Report
+-File Uploads   → Signature Scan → Classification → Malware Check → Quarantine → Notify Admin
 \`\`\`
 
 ### 4. Automated Response System
