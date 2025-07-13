@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Cybersecurity Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>AI CyberGuard</h1>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot active"></span>
+                    <span>System Active</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Real-time Stats Dashboard -->
+        <section class="stats-dashboard">
+            <div class="stat-card">
+                <div class="stat-icon threats">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="threats-blocked">0</h3>
+                    <p>Threats Blocked</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon packets">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="packets-analyzed">0</h3>
+                    <p>Packets Analyzed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon anomalies">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="anomalies-detected">0</h3>
+                    <p>Anomalies Detected</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon health">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="system-health">98.5%</h3>
+                    <p>System Health</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="monitoring">
+                <i class="fas fa-desktop"></i> Monitoring
+            </button>
+            <button class="tab-btn" data-tab="threats">
+                <i class="fas fa-bug"></i> Threats
+            </button>
+            <button class="tab-btn" data-tab="analysis">
+                <i class="fas fa-brain"></i> AI Analysis
+            </button>
+            <button class="tab-btn" data-tab="network">
+                <i class="fas fa-wifi"></i> Network
+            </button>
+            <button class="tab-btn" data-tab="response">
+                <i class="fas fa-bolt"></i> Response
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- Monitoring Tab -->
+            <div id="monitoring" class="tab-pane active">
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-radar"></i> Real-time Detection</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="detection-status">
+                                <div class="status-item">
+                                    <span>AI Models Status:</span>
+                                    <span class="badge success">Active</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>Detection Rate:</span>
+                                    <span class="badge info">99.2%</span>
+                                </div>
+                                <div class="status-item">
+                                    <span>False Positives:</span>
+                                    <span class="badge warning">0.1%</span>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <label>System Performance</label>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 94%"></div>
+                                </div>
+                                <span>94%</span>
+                            </div>
+                            <button class="btn primary" onclick="runDeepScan()">
+                                <i class="fas fa-search"></i> Run Deep Scan
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> AI Performance</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="metric-grid">
+                                <div class="metric">
+                                    <h4>99.2%</h4>
+                                    <p>Accuracy</p>
+                                </div>
+                                <div class="metric">
+                                    <h4>0.3s</h4>
+                                    <p>Response Time</p>
+                                </div>
+                                <div class="metric">
+                                    <h4>24/7</h4>
+                                    <p>Monitoring</p>
+                                </div>
+                                <div class="metric">
+                                    <h4>ML</h4>
+                                    <p>Powered</p>
+                                </div>
+                            </div>
+                            <div class="ai-status">
+                                <div class="ai-model">
+                                    <span>Threat Detection Model</span>
+                                    <div class="model-status active"></div>
+                                </div>
+                                <div class="ai-model">
+                                    <span>Anomaly Detection Model</span>
+                                    <div class="model-status active"></div>
+                                </div>
+                                <div class="ai-model">
+                                    <span>Behavioral Analysis Model</span>
+                                    <div class="model-status active"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="scan-results" style="display: none;">
+                    <div class="card-header">
+                        <h3><i class="fas fa-clipboard-list"></i> Latest Scan Results</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="scan-grid">
+                            <div class="scan-metric">
+                                <h4 id="scan-packets">0</h4>
+                                <p>Packets Scanned</p>
+                            </div>
+                            <div class="scan-metric">
+                                <h4 id="scan-threats">0</h4>
+                                <p>Threats Found</p>
+                            </div>
+                            <div class="scan-metric">
+                                <h4 id="scan-anomalies">0</h4>
+                                <p>Anomalies</p>
+                            </div>
+                            <div class="scan-metric">
+                                <h4 id="scan-clean">0%</h4>
+                                <p>Clean Traffic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Threats Tab -->
+            <div id="threats" class="tab-pane">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-shield-virus"></i> Threat Detection Log</h3>
+                        <button class="btn secondary" onclick="clearThreats()">Clear Log</button>
+                    </div>
+                    <div class="card-body">
+                        <div id="threat-list" class="threat-list">
+                            <div class="no-threats">
+                                <i class="fas fa-shield-check"></i>
+                                <p>No threats detected. System monitoring...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Analysis Tab -->
+            <div id="analysis" class="tab-pane">
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-user-check"></i> Behavioral Analysis</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="behavior-analysis">
+                                <div class="behavior-item">
+                                    <span>Login Patterns</span>
+                                    <span class="badge success">Normal</span>
+                                </div>
+                                <div class="behavior-item">
+                                    <span>Access Frequency</span>
+                                    <span class="badge warning">Monitoring</span>
+                                </div>
+                                <div class="behavior-item">
+                                    <span>Geographic Location</span>
+                                    <span class="badge success">Expected</span>
+                                </div>
+                                <div class="behavior-item">
+                                    <span>Device Fingerprint</span>
+                                    <span class="badge info">Verified</span>
+                                </div>
+                            </div>
+                            <button class="btn primary" onclick="runBehaviorAnalysis()">
+                                <i class="fas fa-analytics"></i> Run Analysis
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-virus"></i> Malware Detection</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="upload-area" onclick="document.getElementById('file-input').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload file for analysis</p>
+                                <small>Supports .exe, .pdf, .doc, .zip files</small>
+                                <input type="file" id="file-input" style="display: none;" onchange="analyzeFile(this)">
+                            </div>
+                            <div id="file-analysis-result" class="analysis-result" style="display: none;">
+                                <div class="result-header">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span id="analyzed-filename"></span>
+                                </div>
+                                <div class="result-details">
+                                    <div class="result-item">
+                                        <span>Classification:</span>
+                                        <span id="file-classification" class="badge"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span>Confidence:</span>
+                                        <span id="file-confidence"></span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span>Status:</span>
+                                        <span id="file-status" class="badge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Tab -->
+            <div id="network" class="tab-pane">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-network-wired"></i> Network Traffic Analysis</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="network-stats">
+                            <div class="network-metric">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <h4 id="network-throughput">2.4 GB/s</h4>
+                                    <p>Current Throughput</p>
+                                </div>
+                            </div>
+                            <div class="network-metric">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4 id="active-connections">1,247</h4>
+                                    <p>Active Connections</p>
+                                </div>
+                            </div>
+                            <div class="network-metric">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h4 id="suspicious-ips">3</h4>
+                                    <p>Suspicious IPs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="network-analysis">
+                            <label for="network-input">Analyze Network Segment:</label>
+                            <div class="input-group">
+                                <input type="text" id="network-input" placeholder="Enter IP address or range (e.g., 192.168.1.0/24)">
+                                <button class="btn primary" onclick="analyzeNetwork()">
+                                    <i class="fas fa-search"></i> Analyze
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="network-analysis-result" class="analysis-result" style="display: none;">
+                            <h4>Network Analysis Results</h4>
+                            <div class="network-results">
+                                <div class="result-item">
+                                    <span>Hosts Discovered:</span>
+                                    <span id="hosts-found">0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>Open Ports:</span>
+                                    <span id="open-ports">0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>Vulnerabilities:</span>
+                                    <span id="vulnerabilities" class="badge warning">0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span>Risk Level:</span>
+                                    <span id="risk-level" class="badge success">Low</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Tab -->
+            <div id="response" class="tab-pane">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bolt"></i> Automated Response System</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Automated response system is active. AI will automatically respond to high-severity threats.</span>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="response-actions">
+                                <h4>Response Actions</h4>
+                                <div class="action-list">
+                                    <div class="action-item">
+                                        <span>Block Malicious IPs</span>
+                                        <span class="badge success">Enabled</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>Quarantine Files</span>
+                                        <span class="badge success">Enabled</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>Alert Security Team</span>
+                                        <span class="badge success">Enabled</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>Auto-Update Rules</span>
+                                        <span class="badge success">Enabled</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="response-stats">
+                                <h4>Response Statistics</h4>
+                                <div class="stat-list">
+                                    <div class="stat-item">
+                                        <span>Average Response Time</span>
+                                        <span class="value">0.3s</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span>Successful Mitigations</span>
+                                        <span class="value">99.8%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span>False Positives</span>
+                                        <span class="value">0.1%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span>Actions Taken Today</span>
+                                        <span class="value" id="actions-today">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-actions">
+                            <h4>Recent Automated Actions</h4>
+                            <div id="action-log" class="action-log">
+                                <div class="no-actions">
+                                    <i class="fas fa-clock"></i>
+                                    <p>No recent actions. System monitoring...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
